@@ -1,0 +1,40 @@
+# Laravel & Composer
+/vendor
+/node_modules
+
+# Laravel storage & cache
+# /storage/*.key
+# /storage/pail
+# /storage/logs
+# /storage/framework
+# /.phpunit.cache
+# /.phpunit.result.cache
+
+# Build & hot reload
+/public/build
+# /public/hot
+
+# Local files
+.env
+# .env.backup
+# .env.production
+
+# IDE/editor configs
+/.idea
+/.vscode
+/.nova
+/.fleet
+/.zed
+
+# Homestead & debug
+# Homestead.json
+# Homestead.yaml
+# npm-debug.log
+# yarn-error.log
+
+# Misc
+# /auth.json
+# .phpactor.json
+
+# Ignore public storage symlink
+# /public/storage
