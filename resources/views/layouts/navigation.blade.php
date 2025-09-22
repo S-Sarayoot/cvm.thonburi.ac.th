@@ -57,7 +57,7 @@
                 <div>
                     <div class="text-5xl font-extrabold tracking-wide" style="color:#8a438f">CVM - Thonburi Vocational College</div>
                     <div class="border-b-4 w-32 mx-auto mt-2" style="border-color:#891f71"></div>
-                    <div class="text-lg font-bold mt-2" style="color:#5b3a5b">ศูนย์บริหารเครือข่ายการผลิตและพัฒนากำลังคนอาชีวศึกษา</div>
+                    <div class="text-lg font-bold mt-2" style="color:#5b3a5b">ระบบคลังปัญญาอาชีวศึกษา สาขาวิชาวิจิตรศิลป์</div>
                 </div>
             </div>
         </div>
