@@ -38,3 +38,4 @@
 
 # Ignore public storage symlink
 # /public/storage
+# /storage/app/public
