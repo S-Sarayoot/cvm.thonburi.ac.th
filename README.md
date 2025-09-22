@@ -38,3 +38,8 @@ npm run dev
 ```bash
 php artisan migrate
 ```
+
+
+Reference
+SVG Icon
+https://tablericons.com/
