@@ -17,7 +17,7 @@
 # Local files
 .env
 # .env.backup
-# .env.production
+.env.production
 
 # IDE/editor configs
 /.idea
