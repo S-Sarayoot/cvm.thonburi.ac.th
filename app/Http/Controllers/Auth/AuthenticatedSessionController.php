@@ -34,7 +34,7 @@ class AuthenticatedSessionController extends Controller
             return redirect()->intended(route('admin', absolute: false));
         } else {
             // investors หรือ role อื่น
-            return redirect()->intended(route('dashboard', absolute: false));
+            return redirect()->intended(route('user', absolute: false));
         }
 
         //return redirect()->intended(route('dashboard', absolute: false));
