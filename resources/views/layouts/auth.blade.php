@@ -37,7 +37,7 @@
         <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-800 bg-opacity-20 transition-all duration-[2000ms]">
             <div>
                 <a href="/">
-                    <x-application-logo class="w-32 h-32 fill-current text-[#db337f]" />
+                    <x-application-logo class="w-15 h-15 fill-current text-[#db337f]" />
                 </a>
             </div>
 
