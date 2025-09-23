@@ -16,7 +16,7 @@ class User extends Authenticatable
     
     public function getAuthPassword()
     {
-        return $this->encrypted_password;
+        return $this->password;
     }
 
     /**
@@ -27,7 +27,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'encrypted_password',
+        'password',
         'phone',
         'date_of_birth',
         'street_address',
@@ -45,7 +45,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        'encrypted_password',
+        'password',
         'remember_token',
     ];
 
@@ -58,7 +58,7 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'encrypted_password' => 'hashed',
+            'password' => 'hashed',
         ];
     }
 
