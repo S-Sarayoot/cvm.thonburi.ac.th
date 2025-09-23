@@ -197,7 +197,7 @@
             </div>
         </div>
         <div class="flex justify-center mb-8">
-            <a href="#" class="bg-[#5d1d5a] hover:bg-[#740f65] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูข่าวล่าสุด <span class="ml-1">→</span></a>
+            <a href="#" class="bg-[#8a438f] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูข่าวล่าสุด <span class="ml-1">→</span></a>
         </div>
 
         <!-- ข่าวที่เกี่ยวข้อง -->
@@ -244,7 +244,7 @@
             </div>
         </div>
         <div class="flex justify-center mb-8">
-            <a href="#" class="bg-[#891f71] hover:bg-[#740f65] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูข่าวที่เกี่ยวข้อง <span class="ml-1">→</span></a>
+            <a href="#" class="bg-[#8a438f] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูข่าวที่เกี่ยวข้อง <span class="ml-1">→</span></a>
         </div>
 
         <!-- บทความที่เกี่ยวข้อง -->
@@ -291,7 +291,7 @@
             </div>
         </div>
         <div class="flex justify-center mb-8">
-            <a href="#" class="bg-[#740f65] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูบทความเพิ่มเติม <span class="ml-1">→</span></a>
+            <a href="#" class="bg-[#8a438f] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูบทความเพิ่มเติม <span class="ml-1">→</span></a>
         </div>
 
         <!-- วิดีโอเด่นๆ โมเดิร์น (Glassmorphism + Gradient + Floating Play) -->
