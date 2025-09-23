@@ -15,61 +15,61 @@ use Maatwebsite\Excel\Facades\Excel;
 use Barryvdh\DomPDF\Facade\Pdf; 
 
 
-class InvestorController extends Controller
+class UserController extends Controller
 {
-    public function investorDashboard()
+    public function userDashboard()
     {
-        $investments = Investment::where('user_id', auth()->user()->id)->get();        
-        $sales = Sale::where('user_id', auth()->user()->id)->get();
+        // $investments = Investment::where('user_id', auth()->user()->id)->get();        
+        // $sales = Sale::where('user_id', auth()->user()->id)->get();
 
-        $payments = Payment::where('user_id', auth()->user()->id)->get();
-        // รวมข้อมูล 2 ส่วน
-        $statements = collect();
+        // $payments = Payment::where('user_id', auth()->user()->id)->get();
+        // // รวมข้อมูล 2 ส่วน
+        // $statements = collect();
         
-        foreach ($investments as $inv) {
-            $statements->push([
-                'id' => $inv->id,
-                'date' => $inv->invested_at,
-                'type' => 'Investment',
-                'shares' => $inv->shares,
-                'price' => $inv->price / 100,
-                'annual-benefit' => $inv->reinvestment,
-                'complimentary' => $inv->complimentary,
-                'transfer' => $inv->transfer,
-            ]);
-        }
+        // foreach ($investments as $inv) {
+        //     $statements->push([
+        //         'id' => $inv->id,
+        //         'date' => $inv->invested_at,
+        //         'type' => 'Investment',
+        //         'shares' => $inv->shares,
+        //         'price' => $inv->price / 100,
+        //         'annual-benefit' => $inv->reinvestment,
+        //         'complimentary' => $inv->complimentary,
+        //         'transfer' => $inv->transfer,
+        //     ]);
+        // }
 
-        foreach ($sales as $sale) {
-            $statements->push([
-                'id' => $sale->id,
-                'date' => $sale->sold_at,
-                'type' => 'Sale',
-                'shares' => $sale->shares,
-                'price' => $sale->price / 100,
-                'annual-benefit' => null,
-                'complimentary' => null,
-                'transfer' => $sale->transfer,
-            ]);
-        }
+        // foreach ($sales as $sale) {
+        //     $statements->push([
+        //         'id' => $sale->id,
+        //         'date' => $sale->sold_at,
+        //         'type' => 'Sale',
+        //         'shares' => $sale->shares,
+        //         'price' => $sale->price / 100,
+        //         'annual-benefit' => null,
+        //         'complimentary' => null,
+        //         'transfer' => $sale->transfer,
+        //     ]);
+        // }
 
-        // Sorting by date
-        $statements = $statements->sortBy('date');
+        // // Sorting by date
+        // $statements = $statements->sortBy('date');
 
-        // Prepare for Graph
-        $graphLabels = $investments->pluck('invested_at')->map(function($date) {
-            return \Carbon\Carbon::parse($date)->format('Y-m-d');
-        })->toArray();
+        // // Prepare for Graph
+        // $graphLabels = $investments->pluck('invested_at')->map(function($date) {
+        //     return \Carbon\Carbon::parse($date)->format('Y-m-d');
+        // })->toArray();
 
-        $graphData = $investments->pluck('shares')->toArray();
+        // $graphData = $investments->pluck('shares')->toArray();
 
-        //replace paid_at with only date in $payment
-        $payments = $payments->map(function($item) {
-            $item->paid_at = \Carbon\Carbon::parse($item->paid_at)->format('Y-m-d');
-            return $item;
-        });
+        // //replace paid_at with only date in $payment
+        // $payments = $payments->map(function($item) {
+        //     $item->paid_at = \Carbon\Carbon::parse($item->paid_at)->format('Y-m-d');
+        //     return $item;
+        // });
 
         //return view('admin.investment', compact('investments','user', 'sales', 'payment', 'statements', 'graphLabels', 'graphData'));
-        return view('dashboard', compact('investments', 'sales', 'payments', 'statements', 'graphLabels', 'graphData'));
+        return view('user.dashboard');
     }
 
     public function getStatementByMonth(Request $request)
