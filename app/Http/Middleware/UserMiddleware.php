@@ -16,7 +16,7 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->admin == '0') { //field name is admin && admin value is [0,1] user,admin
+        if (Auth::check() && Auth::user()->is_admin == '0') { //field name is admin && admin value is [0,1] user,admin
             return $next($request);
         }
         return redirect('/login')->with('error', 'Unauthorized access.'); // Redirect to login
