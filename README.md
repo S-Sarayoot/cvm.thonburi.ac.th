@@ -39,6 +39,15 @@ npm run dev
 php artisan migrate
 ```
 
+### Update Migrate
+
+ล้าง db และสร้างใหม่
+
+```bash
+php artisan migrate:fresh
+php artisan db:seed
+```
+####
 
 Reference
 SVG Icon
