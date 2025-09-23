@@ -18,16 +18,16 @@ class AdminController extends Controller
 {
     public function adminDashboard()
     {
-        $users = User::all();
+        // $users = User::all();
         
-        foreach ($users as $user) {
-            $user->total_investment = Investment::where('user_id', $user->id)->sum('shares');
-            $user->total_sale = Sale::where('user_id', $user->id)->sum('shares');
-            $user->total_payment = Payment::where('user_id', $user->id)->sum('amount');
-        }
+        // foreach ($users as $user) {
+        //     $user->total_investment = Investment::where('user_id', $user->id)->sum('shares');
+        //     $user->total_sale = Sale::where('user_id', $user->id)->sum('shares');
+        //     $user->total_payment = Payment::where('user_id', $user->id)->sum('amount');
+        // }
 
 
-        return view('admin.admin', compact('users'));
+        return view('admin.dashboard');
     }
 
     public function users(Request $request)

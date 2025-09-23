@@ -2,27 +2,43 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\InvestorController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
+// Landing Page
 Route::get('/', function () {
     return view('welcome');
 });
 
+// สลับ Route ในกรณีเพื่อไม่ให้ user เข้า admin page ได้
 Route::get('/admin', function(){
+    if (Auth::check()) {
+        if (Auth::user()->is_admin == '1') {
+            return redirect()->route('admin');
+        } else {
+            return redirect()->route('dashboard');
+        }
+    }
     return redirect()->route('login');
 });
-/*
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified', 'user'])->name('dashboard');
-*/
-Route::middleware(['auth', 'verified', 'user'])->group(function(){
-    Route::get('/dashboard', [InvestorController::class, 'investorDashboard'])->name('dashboard');
+Route::get('/dashboard', function(){
+    if (Auth::check()) {
+        if (Auth::user()->is_admin == '1') {
+            return redirect()->route('admin');
+        } else {
+            return redirect()->route('dashboard');
+        }
+    }
+    return redirect()->route('login');
 });
 
 
+// USER ROUTE
+Route::middleware(['auth', 'verified', 'user'])->group(function(){
+    Route::get('/dashboard', [UserController::class, 'userDashboard'])->name('dashboard');
+});
 
 //ADMIN ROUTE
 Route::middleware(['admin'])->group(function () {
@@ -44,6 +60,8 @@ Route::middleware('auth')->group(function () {
     Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    // ADMIN ROUTE
+    Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');
     // User Management - create,edit,delete
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/admin/users/findbymonth', [AdminController::class, 'findByMonth'])->name('admin.users.findbymonth');
@@ -85,9 +103,9 @@ Route::middleware('auth')->group(function () {
     //Export
     Route::get('/admin/users/export', [AdminController::class, 'exportUsers'])->name('admin.users.export');
 
-    //Investor Dashboard
-    Route::get('/dashboard/statement', [InvestorController::class, 'getStatementByMonth'])->name('dashboard.statement');
-    Route::get('/statement/pdf', [InvestorController::class, 'exportStatementPdf'])->name('statement.pdf');
+    //User Dashboard
+    Route::get('/dashboard/statement', [UserController::class, 'getStatementByMonth'])->name('dashboard.statement');
+    Route::get('/statement/pdf', [UserController::class, 'exportStatementPdf'])->name('statement.pdf');
 });
 
 

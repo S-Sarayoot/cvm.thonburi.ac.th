@@ -30,7 +30,7 @@ class AuthenticatedSessionController extends Controller
 
         // ตรวจสอบ role
         $user = $request->user();
-        if ($user->admin == '1') {
+        if ($user->is_admin == '1') {
             return redirect()->intended(route('admin', absolute: false));
         } else {
             // investors หรือ role อื่น
