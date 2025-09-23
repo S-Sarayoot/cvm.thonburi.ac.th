@@ -63,7 +63,7 @@ class AdminController extends Controller
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        $user->encrypted_password = bcrypt($validated['password']);
+        $user->password = bcrypt($validated['password']);
         $user->save();
 
         return redirect()->route('admin.users')->with('success', 'Password updated successfully.');
@@ -108,7 +108,7 @@ class AdminController extends Controller
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        $validated['encrypted_password'] = bcrypt($validated['password']);
+        $validated['password'] = bcrypt($validated['password']);
         unset($validated['password']);
 
         User::create($validated);
@@ -129,7 +129,7 @@ class AdminController extends Controller
             'temp_id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
-            'encrypted_password' => $user->encrypted_password,
+            'password' => $user->password,
             'date_of_birth' => $user->date_of_birth,
             'phone' => $user->phone,
             'street_address' => $user->street_address,
