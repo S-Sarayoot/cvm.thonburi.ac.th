@@ -23,12 +23,12 @@
     
     @php
         $backgrounds = [
-            asset('images/bg1.jpg'),
-            asset('images/bg2.jpg'),
-            //asset('images/bg3.jpg'),
-            asset('images/bg4.jpg'),
-            asset('images/bg5.jpg'),
-            asset('images/bg6.jpg'),
+            asset('images/fineart-bg-1.png'),
+            asset('images/fineart-bg-2.jpg'),
+            asset('images/fineart-bg-3.jpg'),
+            asset('images/fineart-bg-4.jpg'),
+            // asset('images/bg5.jpg'),
+            // asset('images/bg6.jpg'),
         ];
         $bg = $backgrounds[array_rand($backgrounds)];
     @endphp
