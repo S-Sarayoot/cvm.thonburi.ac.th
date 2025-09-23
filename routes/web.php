@@ -18,17 +18,17 @@ Route::get('/admin', function(){
         if (Auth::user()->is_admin == '1') {
             return redirect()->route('admin');
         } else {
-            return redirect()->route('dashboard');
+            return redirect()->route('user');
         }
     }
     return redirect()->route('login');
 });
-Route::get('/dashboard', function(){
+Route::get('/user', function(){
     if (Auth::check()) {
         if (Auth::user()->is_admin == '1') {
             return redirect()->route('admin');
         } else {
-            return redirect()->route('dashboard');
+            return redirect()->route('user');
         }
     }
     return redirect()->route('login');
@@ -37,13 +37,12 @@ Route::get('/dashboard', function(){
 
 // USER ROUTE
 Route::middleware(['auth', 'verified', 'user'])->group(function(){
-    Route::get('/dashboard', [UserController::class, 'userDashboard'])->name('dashboard');
+    Route::get('/user', [UserController::class, 'userDashboard'])->name('dashboard');
 });
 
 //ADMIN ROUTE
 Route::middleware(['admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');
-    
+    Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');    
 });
 
 //
@@ -61,7 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // ADMIN ROUTE
-    Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');
+    //Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');
     // User Management - create,edit,delete
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/admin/users/findbymonth', [AdminController::class, 'findByMonth'])->name('admin.users.findbymonth');
@@ -103,7 +102,8 @@ Route::middleware('auth')->group(function () {
     //Export
     Route::get('/admin/users/export', [AdminController::class, 'exportUsers'])->name('admin.users.export');
 
-    //User Dashboard
+    //User Route
+    //Route::get('/user', [UserController::class, 'userDashboard'])->name('dashboard');
     Route::get('/dashboard/statement', [UserController::class, 'getStatementByMonth'])->name('dashboard.statement');
     Route::get('/statement/pdf', [UserController::class, 'exportStatementPdf'])->name('statement.pdf');
 });

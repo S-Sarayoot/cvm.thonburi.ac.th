@@ -14,9 +14,10 @@
         <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -33,17 +34,58 @@
         $bg = $backgrounds[array_rand($backgrounds)];
     @endphp
 
-    <body class="font-sans text-gray-900 antialiased" style="background-image: url('{{ $bg }}'); background-size: cover; background-position: center;">
-        <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-800 bg-opacity-20 transition-all duration-[2000ms]">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-32 h-32 fill-current text-[#db337f]" />
-                </a>
-            </div>
+    <style>
+        
 
+        .athiti-extralight {
+        font-family: "Athiti", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        }
 
-            <div id="fade-login" class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg opacity-0 transition-opacity duration-700">
-                {{ $slot }}
+        .athiti-light {
+        font-family: "Athiti", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        }
+
+        .athiti-regular {
+        font-family: "Athiti", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .athiti-medium {
+        font-family: "Athiti", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        }
+
+        .athiti-semibold {
+        font-family: "Athiti", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        }
+
+        .athiti-bold {
+        font-family: "Athiti", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+    </style>
+
+    <body class="font-sans athiti-regular antialiased" >
+        <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white-900">
+            <div class="min-h-screen  bg-gradient-to-r from-gray-100 via-gray-200 to-white-100">
+                @include('layouts-user.navigation')
+
+                
+                <!-- Page Content -->
+                <main>
+                    {{ $slot }}
+                </main>
+
+                @include('layouts-user.footer')     
             </div>
 
             
