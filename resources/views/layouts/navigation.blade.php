@@ -1,7 +1,7 @@
 <nav x-data="{ open: false }">
-    <div class="px-4 sm:px-6 lg:px-8">
+    <div>
         <!-- Top bar -->
-        <div class="flex justify-between items-center py-3">
+        <div class="px-8 flex justify-between items-center py-3">
             <div class="inline-flex items-center">
                 <!-- Hamburger (mobile) -->
                 <div class="flex items-center">
@@ -16,8 +16,8 @@
                         <img src="../public/images/logo.png" alt="CVM Logo" class="size-10 ml-3">
                         <div class="ml-4">
                             <!-- name website -->
-                            <h1 class="text-[#8a438f] text-2xl font-bold">CVM - Thonburi Vocational College</h1>
-                            <h2 class="text-base font-semibold text-[#8a438f]">ระบบคลังปัญญาอาชีวศึกษา สาขาวิชาวิจิตรศิลป์</h2>
+                            <h1 class="text-[#8a438f] text-2xl text-start font-bold">CVM - Thonburi Vocational College</h1>
+                            <h2 class="text-base font-semibold text-start text-[#8a438f]">ระบบคลังปัญญาอาชีวศึกษา สาขาวิชาวิจิตรศิลป์</h2>
                         </div>
                 </button>
             </div>
