@@ -1,16 +1,27 @@
-<nav x-data="{ open: false }" class="bg-white shadow mx-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav x-data="{ open: false }">
+    <div>
         <!-- Top bar -->
-        <div class="flex justify-between items-center py-4">
-            <!-- Hamburger (mobile) -->
-            <div class="flex items-center">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-[#8a438f] hover:bg-[#f3eaf6] focus:outline-none transition">
-                    <svg class="h-7 w-7" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+        <div class="px-8 flex justify-between items-center py-3">
+            <div class="inline-flex items-center">
+                <!-- Hamburger (mobile) -->
+                <div class="flex items-center">
+                    <button @click="open = ! open" class="inline-flex items-center justify-center py-2 rounded-md text-[#8a438f] hover:bg-[#f3eaf6] focus:outline-none transition">
+                        <svg class="h-7 w-7" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <button class="ml-3 flex items-center" @click="window.location.href='/cvm.thonburi.ac.th/public/'">
+                        <img src="../public/images/logo.png" alt="CVM Logo" class="size-10 ml-3">
+                        <div class="ml-4">
+                            <!-- name website -->
+                            <h1 class="text-[#8a438f] text-2xl text-start font-bold">CVM - Thonburi Vocational College</h1>
+                            <h2 class="text-base font-semibold text-start text-[#8a438f]">ระบบคลังปัญญาอาชีวศึกษา สาขาวิชาวิจิตรศิลป์</h2>
+                        </div>
                 </button>
             </div>
+
             <!-- Social icons -->
             <div class="flex gap-4 items-center">
                 <a href="https://www.facebook.com/thonburivocationalcollege" class="text-blue-600" target="_blank" rel="noopener">
@@ -48,31 +59,7 @@
                     </svg>
                 </a>
             </div>
-        </div>
-        <!-- Logo & Title -->
-        <div class="flex flex-col items-center py-2">
-            <div class="flex items-center justify-center">
-                {{-- <img src="{{ asset('images/FMH_Brandmark_TRANSPARENT-100x100.png') }}" alt="Logo" class="h-20 w-20 rounded-full mr-4"> --}}
-                
-                <div>
-                    <div class="text-5xl font-extrabold tracking-wide" style="color:#8a438f">CVM - Thonburi Vocational College</div>
-                    <div class="border-b-4 w-32 mx-auto mt-2" style="border-color:#891f71"></div>
-                    <div class="text-lg font-bold mt-2" style="color:#5b3a5b">ระบบคลังปัญญาอาชีวศึกษา สาขาวิชาวิจิตรศิลป์</div>
-                </div>
-            </div>
-        </div>
-        <!-- Navigation Pills -->
-        <div class="flex justify-center mt-6 pb-8">
-            <div class="flex gap-2 bg-white px-2 py-2">
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#8a438f] bg-white shadow hover:bg-[#f3eaf6] transition border-b-4" style="border-color:#891f71">HOME</a>
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#5b3a5b] hover:bg-[#f3eaf6] transition">NEWS</a>
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#891f71] hover:bg-[#f3eaf6] transition">FIX IT CENTER</a>
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#740f65] hover:bg-[#f3eaf6] transition">EXCELLENT</a>
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#5d1d5a] hover:bg-[#f3eaf6] transition">COURSE</a>
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#8a438f] hover:bg-[#f3eaf6] transition">TRAINING</a>
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#5b3a5b] hover:bg-[#f3eaf6] transition">PARTICIPATION</a>
-                <a href="#" class="px-6 py-2 rounded-full font-bold text-[#891f71] hover:bg-[#f3eaf6] transition">HONOR</a>
-            </div>
-        </div>
+        </div>       
+        
     </div>
 </nav>

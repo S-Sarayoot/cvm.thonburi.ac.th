@@ -1,15 +1,15 @@
 <footer class="bg-white border-t border-gray-300 text-gray-800 py-4">
     <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-8">
         <div class="flex-1 mb-6 md:mb-0">
-            <h5 class="text-xl font-bold text-pink-600 mb-2">ติดต่อสอบถาม</h5>
+            <h5 class="text-xl font-bold text-[#8a438f] mb-2">ติดต่อสอบถาม</h5>
             <div class="mb-2">วิทยาลัยอาชีวศึกษาธนบุรี</div>
-            <div class="mb-2"><span class="font-bold text-yellow-700">โทร:</span> <span>02-412-6285 , 02-4123-411</span></div>
-            <div class="mb-2"><span class="font-bold text-yellow-700">Email:</span> <a href="mailto:saraban@thonburi.ac.th" class="underline text-yellow-700">saraban@thonburi.ac.th</a></div>
-            <div class="mb-2"><span class="font-bold text-yellow-700">ที่อยู่:</span> <span>182 ซอย จรัญสนิทวงศ์ 13 แขวงวัดท่าพระ เขตบางกอกใหญ่ กรุงเทพมหานคร 10600</span></div>
-            <div class="mb-2"><span class="font-bold text-yellow-700">เวลาทำการ:</span> <span>จันทร์-ศุกร์ 08:00-16:00 น.</span></div>
+            <div class="mb-2"><span class="font-bold text-[#8a438f]">โทร:</span> <span>02-412-6285 , 02-4123-411</span></div>
+            <div class="mb-2"><span class="font-bold text-[#8a438f]">Email:</span> <a href="mailto:saraban@thonburi.ac.th" class="underline text-[#8a438f]">saraban@thonburi.ac.th</a></div>
+            <div class="mb-2"><span class="font-bold text-[#8a438f]">ที่อยู่:</span> <span>182 ซอย จรัญสนิทวงศ์ 13 แขวงวัดท่าพระ เขตบางกอกใหญ่ กรุงเทพมหานคร 10600</span></div>
+            <div class="mb-2"><span class="font-bold text-[#8a438f]">เวลาทำการ:</span> <span>จันทร์-ศุกร์ 08:00-16:00 น.</span></div>
         </div>
         <div class="flex-1 mb-6 md:mb-0">
-            <h5 class="text-xl font-bold text-pink-600 mb-2">ติดตามเรา</h5>
+            <h5 class="text-xl font-bold text-[#8a438f] mb-2">ติดตามเรา</h5>
             <div class="flex gap-4 mb-2">
                 <a href="https://www.facebook.com/thonburivocationalcollege" class="text-blue-600">
                     <svg
@@ -46,14 +46,14 @@
                     </svg>
                 </a>
             </div>
-            <div class="mb-2"><a href="https://goo.gl/maps/2QwQwQwQwQwQwQwQ8" target="_blank" class="underline text-green-600">ดูแผนที่ Google Maps</a></div>
+            <div class="mb-2"><a href="https://goo.gl/maps/2QwQwQwQwQwQwQwQ8" target="_blank" class="underline text-[#8a438f]">ดูแผนที่ Google Maps</a></div>
         </div>
         <div class="flex-1">
-            <h5 class="text-xl font-bold text-pink-600 mb-2">เกี่ยวกับเรา</h5>
+            <h5 class="text-xl font-bold text-[#8a438f] mb-2">เกี่ยวกับเรา</h5>
             <div>วิทยาลัยอาชีวศึกษาธนบุรี มุ่งมั่นพัฒนาคุณภาพการศึกษาและบริการเพื่อสังคม</div>
         </div>
     </div>
-    <div class="border-t border-pink-300 pt-4 mt-8 text-center">
+    <div class="border-t border-purple-300 pt-4 mt-8 text-center">
         <small class="text-gray-500">&copy; {{ date('Y') }} วิทยาลัยอาชีวศึกษาธนบุรี | All rights reserved.</small>
     </div>
 </footer>
