@@ -1,35 +1,44 @@
 <x-user-layout>
     <div class="flex min-h-screen bg-gray-50">
         {{-- Sidebar --}}
-        @include('layouts-admin.sidebar')
-    
+        <div class="flex">
+            @auth
+                @if (auth()->user()->is_admin === '1')
+                    @include('layouts-admin.sidebar')
+                @else
+                    @include('layouts-user.sidebar')
+                @endif
+            @endauth
+        </div>
+        {{-- Main Content --}}
         <style>
             html {
                 scroll-behavior: smooth;
             }
         </style>
         <div class="pt-0 pb-32 bg-gradient-to-br from-[#000000] via-[#1a1a1a] to-[#db337f] min-h-screen">
-            
+
 
             <div class="relative rounded-xl mb-8 overflow-hidden">
-                <img src="{{ asset('images/badge1.jpg') }}" alt="Dashboard badge" 
-                    class="w-full h-100 object-cover rounded-xl"  
-                    style="filter: brightness(0.7);">
+                <img src="{{ asset('images/badge1.jpg') }}" alt="Dashboard badge"
+                    class="w-full h-100 object-cover rounded-xl" style="filter: brightness(0.7);">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                <div class="absolute md:left-16 md:top-64 bottom-4 left-4 text-white text-2xl md:text-3xl font-bold drop-shadow-lg transition-opacity duration-300 opacity-100">
+                <div
+                    class="absolute md:left-16 md:top-64 bottom-4 left-4 text-white text-2xl md:text-3xl font-bold drop-shadow-lg transition-opacity duration-300 opacity-100">
                     Welcome back<br>{{ Auth::user()->name }}!
                 </div>
             </div>
 
 
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex flex-col gap-6">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex flex-col gap-6">
 
-                
+
                 <div class="py-4">
-                    {{--<h2 class="font-semibold text-xl md:text-xl text-white leading-tight">Welcome to your Dashboard</h2>--}}
-                    <h2 class="font-semibold text-xl md:text-2xl text-[#c9a14a] leading-tight">Explore your Dashboard</h2>
+                    {{-- <h2 class="font-semibold text-xl md:text-xl text-white leading-tight">Welcome to your Dashboard</h2> --}}
+                    <h2 class="font-semibold text-xl md:text-2xl text-[#c9a14a] leading-tight">Explore your Dashboard
+                    </h2>
                 </div>
-                
+
                 {{-- @push('scripts')
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
                 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
@@ -94,7 +103,7 @@
                 });
                 </script> 
                 @endpush --}}
-                
+
                 {{-- <!-- Investments Section -->
                 <div id="investments-statement" class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition">
                     <div class="flex items-center gap-2 mb-4">
@@ -236,29 +245,29 @@
                     </div>
                 </div>
             </div> --}}
+            </div>
         </div>
-    </div>
 
-    @push('scripts')
-    <script>
-        function loadStatementTable() {
-            let month = document.getElementById('month-input').value;
-            fetch("{{ route('dashboard.statement') }}?month=" + month)
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('statement-table').innerHTML = html;
+        @push('scripts')
+            <script>
+                function loadStatementTable() {
+                    let month = document.getElementById('month-input').value;
+                    fetch("{{ route('dashboard.statement') }}?month=" + month)
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('statement-table').innerHTML = html;
+                        });
+                }
+
+                document.getElementById('statement-search-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    loadStatementTable();
                 });
-        }
 
-        document.getElementById('statement-search-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            loadStatementTable();
-        });
-
-        // โหลด statement table ครั้งแรกเมื่อหน้าเว็บโหลด
-        window.addEventListener('DOMContentLoaded', function() {
-            loadStatementTable();
-        });
-    </script>
-    @endpush
+                // โหลด statement table ครั้งแรกเมื่อหน้าเว็บโหลด
+                window.addEventListener('DOMContentLoaded', function() {
+                    loadStatementTable();
+                });
+            </script>
+        @endpush
 </x-user-layout>

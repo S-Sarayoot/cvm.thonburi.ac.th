@@ -6,11 +6,13 @@ use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\NewPasswordController;
 
 // Landing Page
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 // สลับ Route ในกรณีเพื่อไม่ให้ user เข้า admin page ได้
 Route::get('/admin', function(){
@@ -33,16 +35,56 @@ Route::get('/user', function(){
     }
     return redirect()->route('login');
 });
+// register
+Route::get('/register', [RegisteredUserController::class, 'create'])
+    ->name('register');
 
+Route::post('/register', [RegisteredUserController::class, 'store']);
+
+
+
+
+
+// ---------SECTION MOCKUP RESET PASSWORD------------------
+Route::get('/reset-password', function () {
+    return view('auth.login'); // เปลี่ยนเป็นหน้า login
+})->name('password.reset');
+
+// Auth (สมมติว่าต้อง login)
+Route::get('/profile', function () {
+    return view('auth.profile');
+})->name('profile');
+// -----------------END MOCKUP RESET PASSWORD-------------------------------------------------
+// media routes
+Route::get('/all-media', function () {
+    return null; view('all-media');
+})->name('all-media');
 
 // USER ROUTE
 Route::middleware(['auth', 'verified', 'user'])->group(function(){
-    Route::get('/user', [UserController::class, 'userDashboard'])->name('dashboard');
+    Route::get('/user', [UserController::class, 'userDashboard'])->name('user');
+
+       Route::get('/user/my-media', function () {
+        return null; view('user.my-media');
+    })->name('my-media');
 });
 
 //ADMIN ROUTE
 Route::middleware(['admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');    
+    Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');   
+
+    Route::get('/admin/manage-media', function () {
+        return null; view('admin.manage-media');
+    })->name('manage-media');
+
+    Route::get('/admin/report', function () {
+        return null; view('admin.report');
+    })->name('report');
+
+    Route::get('/admin/manage-user', function () {
+        return null; view('admin.manage-user');
+    })->name('manage-user');
+
 });
 
 //
@@ -58,7 +100,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
+    
     // ADMIN ROUTE
     //Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');
     // User Management - create,edit,delete

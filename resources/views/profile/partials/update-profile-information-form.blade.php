@@ -15,7 +15,7 @@
 
     <form method="post" action="{{ route('profile.update', $user->id) }}" class="mt-6 space-y-6">
         @csrf
-        @method('put')
+        @method('put')  
 
         <!-- Account Information -->
         <div class="relative my-8">
@@ -37,6 +37,7 @@
         </div>
 
         <!-- Personal Information -->
+        
         <div class="relative my-8">
             <div class="absolute inset-0 flex items-center" aria-hidden="true">
                 <div class="w-full border-t border-[#db337f]"></div>
@@ -45,6 +46,8 @@
                 <span class="bg-white pr-3 text-base font-semibold text-[#db337f]">Personal Information</span>
             </div>
         </div>
+
+        {{-- name --}}
 
         <div>
             <label class="block font-medium mb-1 text-[#db337f]" for="name">Name</label>
@@ -55,6 +58,8 @@
             @enderror
         </div>
 
+        {{-- phone --}}
+
         <div>
             <label class="block font-medium mb-1 text-[#db337f]" for="phone">Phone</label>
             <input type="text" name="phone" id="phone" value="{{ old('phone', $user->phone) }}"
@@ -63,6 +68,8 @@
                 <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
             @enderror
         </div>
+
+        {{-- date_of_birth --}}
         <div>
             <label class="block font-medium mb-1 text-[#db337f]" for="date_of_birth">Date of birth</label>
             <input type="date" name="date_of_birth" id="date_of_birth" value="{{ old('date_of_birth', $user->date_of_birth) }}"
@@ -71,51 +78,41 @@
                 <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
             @enderror
         </div>
+        {{-- Address --}}
         <div>
-            <label class="block font-medium mb-1 text-[#db337f]" for="street_address">Street address</label>
-            <input type="text" name="street_address" id="street_address" value="{{ old('street_address', $user->street_address) }}"
+            <label class="block font-medium mb-1 text-[#db337f]" for="address">Address</label>
+            <input type="text" name="address" id="address" value="{{ old('address', $user->address) }}"
                 class="w-full border border-[#db337f] rounded-lg px-3 py-2 focus:ring focus:ring-[#db337f]">
-            @error('street_address')
+            @error('address')
                 <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
             @enderror
         </div>
+
+        {{-- Province --}}
+        
         <div>
-            <label class="block font-medium mb-1 text-[#db337f]" for="street_address_2">Street address 2</label>
-            <input type="text" name="street_address_2" id="street_address_2" value="{{ old('street_address_2', $user->street_address_2) }}"
+            <label class="block font-medium mb-1 text-[#db337f]" for="province">Province</label>
+            <input type="text" name="province" id="province" value="{{ old('province', $user->province) }}"
                 class="w-full border border-[#db337f] rounded-lg px-3 py-2 focus:ring focus:ring-[#db337f]">
-            @error('street_address_2')
+            @error('province')
                 <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
             @enderror
         </div>
+        {{-- Zipcode --}}
         <div>
-            <label class="block font-medium mb-1 text-[#db337f]" for="town">Town</label>
-            <input type="text" name="town" id="town" value="{{ old('town', $user->town) }}"
+            <label class="block font-medium mb-1 text-[#db337f]" for="zipcode">Zipcode</label>
+            <input type="text" name="zipcode" id="zipcode" value="{{ old('zipcode', $user->zipcode) }}"
                 class="w-full border border-[#db337f] rounded-lg px-3 py-2 focus:ring focus:ring-[#db337f]">
-            @error('town')
+            @error('zipcode')
                 <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
             @enderror
         </div>
+        {{-- Department name --}}
         <div>
-            <label class="block font-medium mb-1 text-[#db337f]" for="county">County</label>
-            <input type="text" name="county" id="county" value="{{ old('county', $user->county) }}"
+            <label class="block font-medium mb-1 text-[#db337f]" for="department_name">department_name</label>
+            <input type="text" name="department_name" id="department_name" value="{{ old('department_name', $user->department_name) }}"
                 class="w-full border border-[#db337f] rounded-lg px-3 py-2 focus:ring focus:ring-[#db337f]">
-            @error('county')
-                <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
-            @enderror
-        </div>
-        <div>
-            <label class="block font-medium mb-1 text-[#db337f]" for="postcode">Postcode</label>
-            <input type="text" name="postcode" id="postcode" value="{{ old('postcode', $user->postcode) }}"
-                class="w-full border border-[#db337f] rounded-lg px-3 py-2 focus:ring focus:ring-[#db337f]">
-            @error('postcode')
-                <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
-            @enderror
-        </div>
-        <div>
-            <label class="block font-medium mb-1 text-[#db337f]" for="country">Country</label>
-            <input type="text" name="country" id="country" value="{{ old('country', $user->country) }}"
-                class="w-full border border-[#db337f] rounded-lg px-3 py-2 focus:ring focus:ring-[#db337f]">
-            @error('country')
+            @error('department_name')
                 <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
             @enderror
         </div>

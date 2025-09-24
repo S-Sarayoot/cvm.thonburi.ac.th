@@ -5,24 +5,38 @@
     </div>
 
     <ul class="sidebar-menu">
-        <li class="menu-item {{ request()->is('admin/dashboard') ? 'active' : '' }}">
-            <a href="{{ route('admin') }}">
+          
+        <li class="menu-item {{ request()->is('welcome') ? 'active' : '' }}">
+            <a href="{{ route('welcome') }}">
                 <i class="fas fa-tachometer-alt"></i>
-                <span>Dashboard</span>
+                <span>หน้าข่าวสาร</span>
+            </a>
+        </li>
+        <li class="menu-item {{ request()->is('user/dashboard') ? 'active' : '' }}">
+            <a href="{{ route('user') }}">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>หน้าแรก</span>
             </a>
         </li>
 
-        <li class="menu-item {{ request()->is('admin/users*') ? 'active' : '' }}">
-            <a href="#">  
+        <li class="menu-item {{ request()->is('user/all-media*') ? 'active' : '' }}">
+            <a href="{{ route('all-media') }}">  
                 <i class="fas fa-users"></i>
-                <span>Users</span>
+                <span>คลังสื่อ</span>
             </a>
         </li>
 
-        <li class="menu-item {{ request()->is('admin/settings*') ? 'active' : '' }}">
-            <a href="#">
+        <li class="menu-item {{ request()->is('user/my-media*') ? 'active' : '' }}">
+            <a href="my-media">
                 <i class="fas fa-cog"></i>
-                <span>Settings</span>
+                <span>สื่อของฉัน</span>
+            </a>
+        </li>
+
+        <li class="menu-item {{ request()->is('user/edit*') ? 'active' : '' }}">
+            <a href="profile">
+                <i class="fas fa-cog"></i>
+                <span>โปรไฟล์ผู้ใช้</span>
             </a>
         </li>
 
