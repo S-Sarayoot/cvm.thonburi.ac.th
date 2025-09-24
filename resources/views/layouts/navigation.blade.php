@@ -1,29 +1,29 @@
 <nav x-data="{ open: false }">
     <div>
         <!-- Top bar -->
-        <div class="px-8 flex justify-between items-center py-3">
+        <div class="max-md:px-2 px-8 flex justify-between items-center py-3">
             <div class="inline-flex items-center">
                 <!-- Hamburger (mobile) -->
                 <div class="flex items-center">
-                    <button @click="open = ! open" class="inline-flex items-center justify-center py-2 rounded-md text-[#8a438f] hover:bg-[#f3eaf6] focus:outline-none transition">
-                        <svg class="h-7 w-7" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <button @click="open = ! open" class="inline-flex items-center justify-center py-2 px-2 rounded-md text-[#8a438f] hover:bg-[#f3eaf6] focus:outline-none transition">
+                        <svg class="h-7 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                             <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
-                <button class="ml-3 flex items-center" @click="window.location.href='/cvm.thonburi.ac.th/public/'">
-                        <img src="../public/images/logo.png" alt="CVM Logo" class="size-10 ml-3">
-                        <div class="ml-4">
+                <button class="md:ml-3 flex items-center" @click="window.location.href='/cvm.thonburi.ac.th/public/'">
+                        <img src="../public/images/logo.png" alt="CVM Logo" class="max-md:size-8 size-10 md:ml-3">
+                        <div class="md:ml-4 ml-2">
                             <!-- name website -->
-                            <h1 class="text-[#8a438f] text-2xl text-start font-bold">CVM - Thonburi Vocational College</h1>
-                            <h2 class="text-base font-semibold text-start text-[#8a438f]">ระบบคลังปัญญาอาชีวศึกษา สาขาวิชาวิจิตรศิลป์</h2>
+                            <h1 class="text-[#8a438f] max-md:text-xl text-2xl text-start font-bold">CVM - Thonburi Vocational College</h1>
+                            <h2 class="text-base max-md:hidden font-semibold text-start text-[#511655]">ระบบคลังปัญญาอาชีวศึกษา สาขาวิชาวิจิตรศิลป์</h2>
                         </div>
                 </button>
             </div>
 
             <!-- Social icons -->
-            <div class="flex gap-4 items-center">
+            <div class="flex gap-4 items-center max-md:hidden">
                 <a href="https://www.facebook.com/thonburivocationalcollege" class="text-blue-600" target="_blank" rel="noopener">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"

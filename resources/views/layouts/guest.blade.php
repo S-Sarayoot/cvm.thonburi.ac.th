@@ -22,15 +22,15 @@
     </head>
     
     @php
-        $backgrounds = [
-            asset('images/bg1.jpg'),
-            asset('images/bg2.jpg'),
-            //asset('images/bg3.jpg'),
-            asset('images/bg4.jpg'),
-            asset('images/bg5.jpg'),
-            asset('images/bg6.jpg'),
-        ];
-        $bg = $backgrounds[array_rand($backgrounds)];
+$backgrounds = [
+    asset('images/bg1.jpg'),
+    asset('images/bg2.jpg'),
+    //asset('images/bg3.jpg'),
+    asset('images/bg4.jpg'),
+    asset('images/bg5.jpg'),
+    asset('images/bg6.jpg'),
+];
+$bg = $backgrounds[array_rand($backgrounds)];
     @endphp
 
     <style>
@@ -74,7 +74,7 @@
     </style>
 
     <body class="font-sans athiti-regular antialiased" >
-        <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center pt-6 sm:pt-0 bg-white-900">
+        <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center bg-white-900">
             <div class="min-h-screen ">
                 @include('layouts.navigation')
             <!-- Page Heading -->
@@ -103,7 +103,7 @@
                 bottom:40px;
                 right:30px;
                 z-index:999;
-                background: linear-gradient(90deg, #db337f 60%, #c9a14a 100%);
+                background: linear-gradient(90deg, #6e2473 5    0%, #8a438f 100%);
                 color: #fff;
                 border: none;
                 box-shadow: 0 4px 16px rgba(219,51,127,0.15);

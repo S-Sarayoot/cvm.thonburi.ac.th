@@ -32,14 +32,14 @@ $navMenu = [
     ['name' => 'เกี่ยวกับสาขา', 'url' => '#'],
 ];
     @endphp
-        <img src="../public/images/coverPage.png" class="w-full max-w-[90%] shadow-xl max-h-3xl mx-auto rounded-xl">
+        <img src="../public/images/coverPage.png" class="w-full md:max-w-[90%] shadow-xl max-h-3xl mx-auto md:rounded-xl">
         
-        <div class="flex justify-center mt-6 pb-8" x-data="{ active: 'หน้าแรก' }">
-            <div class="flex gap-4 bg-white px-2 py-2">
+        <div class="flex justify-center mt-6 max-md:pb-5 pb-8 w-screen overflow-x-auto whitespace-nowrap" x-data="{ active: 'หน้าแรก' }">
+            <div class="flex w-full gap-4 bg-white max-md:px-4 px-2 py-2 ">
                 @foreach ($navMenu as $item)
                     <a href="{{ $item['url'] }}" @click.prevent="active = '{{ $item['name'] }}'"
-                        class="relative px-3 py-2 font-bold text-gray-600 hover:text-[#8a438f] transition"
-                        :class="active === '{{ $item['name'] }}' ? 'text-[#8a438f]' : ''">
+                        class="relative px-3 py-2 font-bold  hover:text-[#8a438f] transition"
+                        :class="active === '{{ $item['name'] }}' ? 'text-[#8a438f]' : 'text-gray-600'">
 
                         {{ $item['name'] }}
 
