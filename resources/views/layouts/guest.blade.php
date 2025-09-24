@@ -19,34 +19,68 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        
-        <style>
-            .dt-length select {
-                min-width: 50px !important;
-                width: 70px !important;
-            }
-            
-            .dt-paging-button.current {
-                color:#db337f!important;
-                background: none !important;
-                border: 1px solid #db337f !important;
-            }
-            .dt-paging-button:hover {
-                color:#db337f!important;
-                background: #db337f !important;
-                border: 1px solid #db337f !important;
-            }
-        </style>
-        
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    
+    @php
+        $backgrounds = [
+            asset('images/bg1.jpg'),
+            asset('images/bg2.jpg'),
+            //asset('images/bg3.jpg'),
+            asset('images/bg4.jpg'),
+            asset('images/bg5.jpg'),
+            asset('images/bg6.jpg'),
+        ];
+        $bg = $backgrounds[array_rand($backgrounds)];
+    @endphp
 
+    <style>
+        
+
+        .athiti-extralight {
+        font-family: "Athiti", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        }
+
+        .athiti-light {
+        font-family: "Athiti", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        }
+
+        .athiti-regular {
+        font-family: "Athiti", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .athiti-medium {
+        font-family: "Athiti", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        }
+
+        .athiti-semibold {
+        font-family: "Athiti", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        }
+
+        .athiti-bold {
+        font-family: "Athiti", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+    </style>
+
+    <body class="font-sans athiti-regular antialiased" >
+        <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center pt-6 sm:pt-0 bg-white-900">
+            <div class="min-h-screen ">
+                @include('layouts.navigation')
             <!-- Page Heading -->
             @isset($header)
-                <header class="bg-gray-500 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header>
+                    <div class="py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
