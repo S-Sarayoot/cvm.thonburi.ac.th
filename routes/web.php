@@ -12,6 +12,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/repository', function () {
+    return view('knowLedgeRepository.page');
+});
+Route::get('/repository/{id}', function () {
+    return view('knowLedgeRepository.detail');
+});
+
 // สลับ Route ในกรณีเพื่อไม่ให้ user เข้า admin page ได้
 Route::get('/admin', function(){
     if (Auth::check()) {
@@ -23,6 +30,7 @@ Route::get('/admin', function(){
     }
     return redirect()->route('login');
 });
+
 Route::get('/user', function(){
     if (Auth::check()) {
         if (Auth::user()->is_admin == '1') {
