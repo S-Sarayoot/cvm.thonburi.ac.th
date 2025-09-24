@@ -146,7 +146,11 @@
                             </div>
                         </div>
                         <div class="flex justify-center mt-4">
-                            <a href="#" class="bg-white" style="color:#8a438f;border-color:#8a438f" class="font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg border hover:bg-[#f3eaf6]"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>ดูข่าวเพิ่มเติม <span class="ml-1">→</span></a>
+                            <a href="#" class="flex items-center bg-white font-bold px-8 py-3 rounded-full shadow gap-2 text-lg" style="color:#8a438f;border-color:#8a438f" class="font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg border hover:bg-[#f3eaf6]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                                ดูข่าวเพิ่มเติม 
+                                <span class="ml-1">→</span>
+                            </a>
                         </div>
                     </div>
                 </div>
