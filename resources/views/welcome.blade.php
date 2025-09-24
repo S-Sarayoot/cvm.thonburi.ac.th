@@ -1,7 +1,7 @@
 <x-guest-layout>
     
     <!-- Slideshow -->
-    @php
+    <!-- @php 
         $media = [
             ['type' => 'image', 'src' => asset('images/376735713_807586581370290_6796713522220613_n.jpg'), 'title' => 'Hightlight'],
             ['type' => 'image', 'src' => asset('images/434557222_950193557109591_3378711655233104696_n.jpg'), 'title' => 'NEWS'],
@@ -9,7 +9,7 @@
             ['type' => 'image', 'src' => asset('images/501342751_122110225562876310_5305664896280807316_n.jpg'), 'title' => 'HONOR'],
         ];
     @endphp
-    <section class="w-full flex justify-center mb-14 ">
+    <section class="w-full flex justify-center mb-14">
             <div id="slideshow" class="w-full relative overflow-hidden rounded-3xl shadow-2xl bg-white border-2 border-indigo-100">
                 @foreach($media as $index => $item)
                     <div class="slide {{ $index === 0 ? 'block' : 'hidden' }}" data-index="{{ $index }}">
@@ -22,7 +22,33 @@
                 <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-indigo-100 text-indigo-700 font-bold rounded-full px-4 py-3 shadow-lg transition">&#8592;</button>
                 <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-indigo-100 text-indigo-700 font-bold rounded-full px-4 py-3 shadow-lg transition">&#8594;</button>
             </div>
-    </section>
+    </section> -->
+    @php
+$navMenu = [
+    ['name' => 'หน้าแรก', 'url' => '#'],
+    ['name' => 'ประชาสัมพันธ์', 'url' => '#'],
+    ['name' => 'โครงการ', 'url' => '#'],
+    ['name' => 'ผลงานของนักศึกษา', 'url' => '#',],
+    ['name' => 'เกี่ยวกับสาขา', 'url' => '#'],
+];
+    @endphp
+        <img src="../public/images/coverPage.png" class="w-full max-w-[90%] shadow-xl max-h-3xl mx-auto rounded-xl">
+        
+        <div class="flex justify-center mt-6 pb-8" x-data="{ active: 'หน้าแรก' }">
+            <div class="flex gap-4 bg-white px-2 py-2">
+                @foreach ($navMenu as $item)
+                    <a href="{{ $item['url'] }}" @click.prevent="active = '{{ $item['name'] }}'"
+                        class="relative px-3 py-2 font-bold text-gray-600 hover:text-[#8a438f] transition"
+                        :class="active === '{{ $item['name'] }}' ? 'text-[#8a438f]' : ''">
+
+                        {{ $item['name'] }}
+
+                        <span class="absolute left-0 -bottom-1 h-[3px] bg-[#8a438f] rounded-full w-full transform scale-x-0 origin-center transition-transform duration-300"
+                                :class="active === '{{ $item['name'] }}' ? 'scale-x-100' : ''"></span>
+                    </a>
+                @endforeach
+            </div>
+        </div>
 
 
     <div class="max-w-7xl mx-auto px-4 py-8">
@@ -146,11 +172,13 @@
                             </div>
                         </div>
                         <div class="flex justify-center mt-4">
+
                             <a href="#" class="flex items-center bg-white font-bold px-8 py-3 rounded-full shadow gap-2 text-lg" style="color:#8a438f;border-color:#8a438f" class="font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg border hover:bg-[#f3eaf6]">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                                 ดูข่าวเพิ่มเติม 
                                 <span class="ml-1">→</span>
                             </a>
+
                         </div>
                     </div>
                 </div>
