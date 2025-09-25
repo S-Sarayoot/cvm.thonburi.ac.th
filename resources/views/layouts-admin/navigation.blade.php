@@ -1,4 +1,4 @@
-<nav class="bg-white text-gray-800 px-4 py-3 flex items-center justify-between border-b-2 border-gray-300 mb-3">
+<nav class="bg-white text-gray-800 px-4 py-3 flex items-center md:justify-between border-b-2 border-gray-300 mb-3 max-md:hidden">
     <div class="font-semibold text-2xl text-[#74097e]">
         CVM Thonburi admin
     </div>
