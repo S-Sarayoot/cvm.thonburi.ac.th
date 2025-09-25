@@ -23,32 +23,12 @@
                 <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-indigo-100 text-indigo-700 font-bold rounded-full px-4 py-3 shadow-lg transition">&#8594;</button>
             </div>
     </section> -->
-    @php
-$navMenu = [
-    ['name' => 'หน้าแรก', 'url' => '#'],
-    ['name' => 'ประชาสัมพันธ์', 'url' => '#'],
-    ['name' => 'โครงการ', 'url' => '#'],
-    ['name' => 'ผลงานของนักศึกษา', 'url' => '#',],
-    ['name' => 'เกี่ยวกับสาขา', 'url' => '#'],
-];
-    @endphp
-        <img src="../public/images/coverPage.png" class="w-full md:max-w-[90%] shadow-xl max-h-3xl mx-auto md:rounded-xl">
-        
-        <div class="flex justify-center mt-6 max-md:pb-5 pb-8 w-screen overflow-x-auto whitespace-nowrap" x-data="{ active: 'หน้าแรก' }">
-            <div class="flex w-full gap-4 bg-white max-md:px-4 px-2 py-2 ">
-                @foreach ($navMenu as $item)
-                    <a href="{{ $item['url'] }}" @click.prevent="active = '{{ $item['name'] }}'"
-                        class="relative px-3 py-2 font-bold  hover:text-[#8a438f] transition"
-                        :class="active === '{{ $item['name'] }}' ? 'text-[#8a438f]' : 'text-gray-600'">
-
-                        {{ $item['name'] }}
-
-                        <span class="absolute left-0 -bottom-1 h-[3px] bg-[#8a438f] rounded-full w-full transform scale-x-0 origin-center transition-transform duration-300"
-                                :class="active === '{{ $item['name'] }}' ? 'scale-x-100' : ''"></span>
-                    </a>
-                @endforeach
-            </div>
-        </div>
+   <x-popup-announcment wire:model="showPopup">
+    <img src="{{ asset('../public/images/announcment.png') }}" alt="ประกาศ" class="w-full h-auto mb-4 rounded-lg shadow-lg">
+    <a href="#" class="px-6 py-3 rounded-lg  bg-[#8a438f] text-white font-bold hover:bg-purple-700 transition">
+        ดูรายละเอียด
+    </a>
+   </x-popup-announcment>
 
 
     <div class="max-w-7xl mx-auto px-4 py-8">
@@ -129,7 +109,7 @@ $navMenu = [
                 <div class="bg-gradient-to-br from-[#8a438f] to-[#5b3a5b] rounded-2xl shadow-xl overflow-hidden flex flex-col border border-gray-100 relative">
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="bg-white" style="color:#8a438f"><span class="text-lg font-bold px-3 py-1 rounded-full shadow flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>ข่าวที่เกี่ยวข้อง</span></span>
+                            <span class="bg-white text-[#8a438f] rounded-lg"><span class="text-lg font-bold px-3 py-1 rounded-full shadow flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>ข่าวที่เกี่ยวข้อง</span></span>
                             <span class="text-white text-sm">4 รายการ</span>
                             <button class="ml-auto text-white hover:text-gray-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16m16-16v16" /></svg></button>
                         </div>

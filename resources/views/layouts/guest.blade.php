@@ -77,11 +77,12 @@ $bg = $backgrounds[array_rand($backgrounds)];
         <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center bg-white-900">
             <div class="min-h-screen ">
                 @include('layouts.navigation')
+                @include('layouts.banner-header')
             <!-- Page Heading -->
             @isset($header)
                 <header>
                     <div class="py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+                         {{ $header }}
                     </div>
                 </header>
             @endisset
@@ -103,7 +104,7 @@ $bg = $backgrounds[array_rand($backgrounds)];
                 bottom:40px;
                 right:30px;
                 z-index:999;
-                background: linear-gradient(90deg, #6e2473 5    0%, #8a438f 100%);
+                background: linear-gradient(90deg, #6e2473 40%, #8a438f 100%);
                 color: #fff;
                 border: none;
                 box-shadow: 0 4px 16px rgba(219,51,127,0.15);
