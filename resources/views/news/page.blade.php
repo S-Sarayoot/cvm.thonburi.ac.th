@@ -1,4 +1,3 @@
-<x-guest-layout>
     @php
     $active     =  $_GET['category'] ?? 'ทั้งหมด';
     $categories = ['ทั้งหมด','วิดีทัศน์','บทความ','คลังภาพ', 'คลังเสียง'];
@@ -45,4 +44,3 @@
         />
     </div>
 
-</x-guest-layout>
