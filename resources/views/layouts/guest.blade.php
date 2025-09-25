@@ -86,6 +86,9 @@ $bg = $backgrounds[array_rand($backgrounds)];
                 </header>
             @endisset
 
+    
+
+
             <!-- Page Content -->
             <main>
                 {{ $slot }}
