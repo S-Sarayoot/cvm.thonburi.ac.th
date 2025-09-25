@@ -1,12 +1,13 @@
 <x-guest-layout>
     @php
-        $navMenu = [
-            ['name' => 'หน้าแรก'],
-            ['name' => 'ประชาสัมพันธ์'],
-            ['name' => 'โครงการ'],
-            ['name' => 'ผลงานของนักศึกษา'],
-            ['name' => 'เกี่ยวกับสาขา'],
-        ];
+$navMenu = [
+    ['name' => 'หน้าแรก'],
+    ['name' => 'ประชาสัมพันธ์'],
+    ['name' => 'คลังปัญญา'],
+    ['name' => 'โครงการ'],
+    ['name' => 'ผลงานของนักศึกษา'],
+    ['name' => 'เกี่ยวกับสาขา'],
+];
     @endphp
 
     <div 
@@ -48,7 +49,9 @@
             <div x-show="active === 'ประชาสัมพันธ์'" x-cloak>
                 @include('components.content-announcment')
             </div>
-            
+            <div x-show="active === 'โครงการ'" x-cloak>
+                @include('components.content-project')
+            </div>
         </div>
 
     </div>
