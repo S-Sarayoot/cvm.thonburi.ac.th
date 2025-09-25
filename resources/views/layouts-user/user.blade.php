@@ -92,6 +92,7 @@ $bg = $backgrounds[array_rand($backgrounds)];
                 <!-- Navbar -->
                 <div class="sticky top-0 z-50 bg-white">
                     @include('layouts-user.navigation')
+                    @include('layouts-user.menu-mobile-user')
                 </div>
         
                 <!-- Content scrollable -->

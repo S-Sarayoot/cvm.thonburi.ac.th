@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div class="min-w-[250px] min-h-screen bg-white px-2 pt-2">
+<div class="min-w-[250px] min-h-screen bg-white px-2 pt-2 max-md:hidden">
     <div class="p-4 rounded-lg shadow-md bg-[#74097e] min-h-[680px] text-purple-50">
         <div class="flex items-center mb-4">
             <img src="{{ asset('images/logo1.png') }}" alt="User Avatar" class="size-9 mr-2">
