@@ -13,7 +13,7 @@
                     </button>
                 </div>
                 <button class="ml-1 md:ml-3 flex items-center" @click="window.location.href='/cvm.thonburi.ac.th/public/'">
-                        <img src="../public/images/logo.png" alt="CVM Logo" class="max-md:size-8 size-10 md:ml-3">
+                        <img src="{{ asset('images/logo.png') }}" alt="CVM Logo" class="max-md:size-8 size-10 md:ml-3">
                         <div class="md:ml-4 ml-2">
                             <!-- name website -->
                             <h1 class="text-[#8a438f] max-md:text-xl text-2xl text-start font-bold">CVM - Thonburi Vocational College</h1>

@@ -24,8 +24,8 @@
             </div>
     </section> -->
    <x-popup-announcment wire:model="showPopup">
-    <img src="{{ asset('../public/images/announcment.png') }}" alt="ประกาศ" class="w-full h-auto mb-4 rounded-lg shadow-lg">
-    <a href="#" class="px-6 py-3 rounded-lg  bg-[#8a438f] text-white font-bold hover:bg-purple-700 transition">
+    <img src="{{ asset('images/announcment.png') }}" alt="ประกาศ" class="w-full h-auto mb-4 rounded-lg shadow-lg">
+    <a href="#" class="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-[#8a438f] text-white font-semibold hover:bg-purple-700 transition">
         ดูรายละเอียด
     </a>
    </x-popup-announcment>
