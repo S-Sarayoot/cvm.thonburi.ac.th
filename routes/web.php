@@ -30,18 +30,18 @@ Route::get('/repository/{id}', function () {
 });
 
 Route::get('/project', function () {
-    return view('knowLedgeRepository.page');
+    return view('project.page');
 });
 Route::get('/project/{id}', function () {
-    return view('knowLedgeRepository.detail');
+    return view('project.detail');
 });
 
-Route::get('/Showcase', function () {
-    return view('knowLedgeRepository.page');
+Route::get('/showcase', function () {
+    return view('showcase.page');
 });
 
-Route::get('/Showcase/{id}', function () {
-    return view('knowLedgeRepository.detail');
+Route::get('/showcase/{id}', function () {
+    return view('showcase.detail');
 });
 
 Route::get('/about', function () {

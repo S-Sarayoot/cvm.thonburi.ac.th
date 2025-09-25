@@ -4,7 +4,7 @@ $navMenu = [
     ['name' => 'ประชาสัมพันธ์', 'url' => '/news'],
     ['name' => 'คลังปัญญา', 'url' => '/repository'],
     ['name' => 'โครงการ', 'url' => '/project'],
-    ['name' => 'ผลงานของนักศึกษา', 'url' => '/Showcase',],
+    ['name' => 'ผลงานของนักศึกษา', 'url' => '/showcase',],
     ['name' => 'เกี่ยวกับสาขา', 'url' => '/about'],
 ];
 @endphp
