@@ -1,1 +1,1 @@
-<img src="{{ asset('images/cropped-51565_18101722225026-1-192x192.png') }}" alt="Application Logo">
+<img src="{{ asset('images/logo1.png') }}" alt="Application Logo">

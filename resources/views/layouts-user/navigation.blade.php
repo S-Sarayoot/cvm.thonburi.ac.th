@@ -1,56 +1,57 @@
-<nav class="bg-gray-400 text-white px-6 py-3 flex items-center justify-between shadow">
-    <div class="font-bold text-lg">
+<nav class="bg-white text-gray-800 px-4 py-3 flex items-center justify-between border-b-2 border-gray-300 mb-3">
+    <div class="font-semibold text-2xl text-[#74097e]">
         CVM Thonburi user
     </div>
-    <ul class="flex gap-6">
+    <ul class="flex items-center">
         <li>
-            <img src="{{ asset('images/user1-160x160.svg') }}" alt="User Avatar" class="w-8 h-8 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="size-7 text-[#74097e]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
         </li>
-        <li class="relative group">
-            <!-- Parent Link -->
-            <a href="#"
-                class="px-4 py-2 flex items-center justify-between text-gray-800 font-medium hover:text-yellow-400 border-[#eb3d26] rounded-lg">
-                สวัสดีคุณ {{ Auth::user()->name }}
+        <li class="relative" x-data="{ open: false }">
+            <!-- Parent Button -->
+            <button @click="open = !open" class="flex items-center">
+                <a href="#" class="pl-2 pr-4 py-2 flex items-center justify-between text-[#74097e] font-semibold rounded-lg">
+                    สวัสดีคุณ {{ Auth::user()->name }}
+                </a>
                 <!-- Arrow Icon -->
-                <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:rotate-180" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="size-6 ml-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
                 </svg>
-            </a>
-
+            </button>
+        
             <!-- Dropdown -->
-            <ul
-                class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
+            <ul x-show="open" @click.away="open = false" x-transition
+                class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50">
                 <li>
                     <a href="/profile"
-                        class="block px-4 py-2 text-gray-800 hover:bg-yellow-100 hover:text-yellow-600 transition-colors duration-150 rounded-lg">
+                        class="block px-4 py-2 font-semibold text-gray-800 hover:bg-purple-400/10 hover:text-purple-900">
                         My Profile
                     </a>
                 </li>
                 <li>
                     <a href="/settings"
-                        class="block px-4 py-2 text-gray-800 hover:bg-yellow-100 hover:text-yellow-600 transition-colors duration-150 rounded-lg">
+                        class="block px-4 py-2 font-semibold text-gray-800 hover:bg-purple-400/10 hover:text-purple-900">
                         Settings
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                        class="block px-4 py-2 text-gray-800 hover:bg-yellow-100 hover:text-yellow-600 transition-colors duration-150 rounded-lg">
+                        class="block px-4 py-2 font-semibold hover:bg-red-400/10 text-red-800">
                         Logout
                     </a>
-
+        
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                         @csrf
                     </form>
                 </li>
-
             </ul>
         </li>
-
-
-
-
     </ul>
     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
         @csrf
