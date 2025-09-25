@@ -24,6 +24,11 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function mockup(Request $request): View
+    {
+        return view('user');
+    }
+
     /**
      * Update the user's profile information.
      */
