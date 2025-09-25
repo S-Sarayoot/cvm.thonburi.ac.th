@@ -49,4 +49,4 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-regist>
+ </x-guest-register>
