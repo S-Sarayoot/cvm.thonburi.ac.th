@@ -7,7 +7,7 @@ $navMenu = [
     ['name' => 'เกี่ยวกับสาขา', 'url' => '#'],
 ];
 @endphp
-<img src="../public/images/coverPage.png" class="w-full md:max-w-[90%] shadow-xl max-h-3xl mx-auto md:rounded-xl">
+<img src="{{asset('images/coverPage.png')}}" class="w-full md:max-w-[90%] shadow-xl max-h-3xl mx-auto md:rounded-xl">
 
 <div class="flex md:justify-center mt-5 md:mt-8 pb-5 w-full overflow-x-auto whitespace-nowrap"
     x-data="{ active: 'หน้าแรก' }">
