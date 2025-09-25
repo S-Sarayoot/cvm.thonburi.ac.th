@@ -1,8 +1,8 @@
-  <x-popup-announcment>
+<x-popup-announcment>
     <div class="flex flex-col items-end">
         <img src="{{ asset('images/announcment.png') }}" alt="ประกาศ" class="w-full h-auto rounded-lg shadow-lg">
         <a href="#" class="group inline-flex px-6 py-3 w-fit my-2 rounded-lg 
-                        bg-gradient-to-r from-purple-700 to-[#891f71] text-white font-semibold 
+        bg-gradient-to-r from-purple-700 to-[#891f71] text-white font-semibold 
                         transition-transform ease-in-out duration-300 shadow-lg hover:scale-[105%]
                         hover:from-[#891f71] hover:to-purple-700 hover:shadow-xl">
             ดูรายละเอียด
@@ -11,10 +11,11 @@
     </div>
    </x-popup-announcment>
 
+   @include('news.page')
         <!-- ข่าวเด่น -->
         <div class="flex items-center gap-2 mb-4">
             <span class="bg-[#8a438f] rounded-full p-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414M17.95 17.95l-1.414-1.414M6.05 6.05L4.636 7.464" /></svg></span>
-            <h2 class="text-2xl font-bold" style="color:#8a438f">ข่าวเด่น</h2>
+            <h2 class="text-2xl font-bold text-[#8a438f]">สื่อยอดนิยม</h2>
             <div class="ml-auto flex gap-2">
                 <button class="bg-gray-200 rounded p-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path d="M4 3a2 2 0 00-2 2v2a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm0 8a2 2 0 00-2 2v2a2 2 0 002 2h12a2 2 0 002-2v-2a2 2 0 00-2-2H4z" /></svg></button>
                 <button class="bg-gray-200 rounded p-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path d="M4 3h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2zm0 8h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2a2 2 0 012-2z" /></svg></button>
@@ -60,13 +61,13 @@
             </div>
         </div>
         <div class="flex justify-center mb-8">
-            <a href="#" class="bg-[#8a438f] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูข่าวทั้งหมด <span class="ml-1">→</span></a>
+            <a href="#" class="bg-[#8a438f] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูสื่อทั้งหมด <span class="ml-1">→</span></a>
         </div>
 
         <!-- Fix it center section -->
         <div class="max-w-7xl mx-auto px-4 py-8">
             <div class="mb-8">
-                <h1 class="text-4xl font-extrabold mb-2 tracking-tight" style="color:#891f71">Fix it center <span class="inline-block align-middle border-b-4" style="border-color:#5d1d5a;ml-2;width:8rem"></span></h1>
+                <h1 class="text-4xl font-extrabold mb-2 tracking-tight text-[#891f71]"">Fix it center <span class="inline-block align-middle border-b-4 border-[#5d1d5a] ml-2 w-3"></span></h1>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- ข่าวหลัก -->
@@ -88,7 +89,7 @@
                 <div class="bg-gradient-to-br from-[#8a438f] to-[#5b3a5b] rounded-2xl shadow-xl overflow-hidden flex flex-col border border-gray-100 relative">
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="bg-white text-[#8a438f] rounded-lg"><span class="text-lg font-bold px-3 py-1 rounded-full shadow flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>ข่าวที่เกี่ยวข้อง</span></span>
+                            <span class="bg-white text-[#8a438f] rounded-lg"><span class="text-lg font-bold px-3 py-1 rounded-full shadow flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>เพิ่มใหม่ล่าสุด</span></span>
                             <span class="text-white text-sm">4 รายการ</span>
                             <button class="ml-auto text-white hover:text-gray-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16m16-16v16" /></svg></button>
                         </div>
@@ -134,7 +135,7 @@
 
                             <a href="#" class="flex items-center bg-white font-bold px-8 py-3 rounded-full shadow gap-2 text-lg" style="color:#8a438f;border-color:#8a438f" class="font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg border hover:bg-[#f3eaf6]">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
-                                ดูข่าวเพิ่มเติม 
+                                ดูสื่อเพิ่มเติม 
                                 <span class="ml-1">→</span>
                             </a>
 
@@ -144,99 +145,8 @@
             </div>
         </div>
 
-        <!-- ข่าวล่าสุด -->
-        <div class="flex items-center gap-2 mb-4">
-            <span class="bg-[#5d1d5a] rounded-full p-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414M17.95 17.95l-1.414-1.414M6.05 6.05L4.636 7.464" /></svg></span>
-            <h2 class="text-xl font-bold" style="color:#5d1d5a">ข่าวล่าสุด</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <!-- ข่าวล่าสุด 1 -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
-                <img src="{{ asset('images/bg1.jpg') }}" alt="ข่าวล่าสุด" class="w-full h-48 object-cover">
-                <div class="p-4 flex-1 flex flex-col">
-                    <div class="font-bold text-lg text-gray-800 mb-2">จิตอาสาช่วยผู้ประสบอุทกภัยจังหวัดน่าน</div>
-                    <div class="text-gray-500 text-sm mb-2">กิจกรรมช่วยเหลือผู้ประสบภัยน้ำท่วมโดยนักศึกษาอาชีวะ</div>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <span class="flex items-center gap-1 text-blue-600 text-xs"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>5</span>
-                        <button class="text-gray-400 hover:text-gray-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
-                    </div>
-                </div>
-            </div>
-            <!-- ข่าวล่าสุด 2 -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
-                <img src="{{ asset('images/bg2.jpg') }}" alt="ข่าวล่าสุด" class="w-full h-48 object-cover">
-                <div class="p-4 flex-1 flex flex-col">
-                    <div class="font-bold text-lg text-gray-800 mb-2">ร่วมสร้างอนาคต เพื่อชุมชนที่ยั่งยืน</div>
-                    <div class="text-gray-500 text-sm mb-2">โครงการพัฒนาชุมชนโดยนักศึกษาอาชีวะ</div>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <span class="flex items-center gap-1 text-blue-600 text-xs"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>3</span>
-                        <button class="text-gray-400 hover:text-gray-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
-                    </div>
-                </div>
-            </div>
-            <!-- ข่าวล่าสุด 3 -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
-                <img src="{{ asset('images/bg4.jpg') }}" alt="ข่าวล่าสุด" class="w-full h-48 object-cover">
-                <div class="p-4 flex-1 flex flex-col">
-                    <div class="font-bold text-lg text-gray-800 mb-2">ปัง !! วิทยากร อบรมการแปรรูปเห็ดเพิ่มมูลค่า</div>
-                    <div class="text-gray-500 text-sm mb-2">อบรมการแปรรูปเห็ดเพื่อเพิ่มมูลค่าให้กับชุมชน</div>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <span class="flex items-center gap-1 text-blue-600 text-xs"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>2</span>
-                        <button class="text-gray-400 hover:text-gray-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="flex justify-center mb-8">
-            <a href="#" class="bg-[#8a438f] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูข่าวล่าสุด <span class="ml-1">→</span></a>
-        </div>
-
-        <!-- ข่าวที่เกี่ยวข้อง -->
-        <div class="flex items-center gap-2 mb-4">
-            <span class="bg-[#891f71] rounded-full p-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg></span>
-            <h2 class="text-xl font-bold" style="color:#891f71">ข่าวที่เกี่ยวข้อง</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <!-- ข่าวที่เกี่ยวข้อง 1 -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
-                <img src="{{ asset('images/bg6.jpg') }}" alt="ข่าวที่เกี่ยวข้อง" class="w-full h-48 object-cover">
-                <div class="p-4 flex-1 flex flex-col">
-                    <div class="font-bold text-lg text-gray-800 mb-2">เพราะการช่วยเหลือผู้อื่น คือ ภารกิจของเรา วก.ศร</div>
-                    <div class="text-gray-500 text-sm mb-2">กิจกรรมช่วยเหลือผู้ประสบภัยน้ำท่วมโดยนักศึกษาอาชีวะ</div>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <span class="flex items-center gap-1 text-pink-600 text-xs"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>2</span>
-                        <button class="text-gray-400 hover:text-gray-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
-                    </div>
-                </div>
-            </div>
-            <!-- ข่าวที่เกี่ยวข้อง 2 -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
-                <img src="{{ asset('images/badge1.jpg') }}" alt="ข่าวที่เกี่ยวข้อง" class="w-full h-48 object-cover">
-                <div class="p-4 flex-1 flex flex-col">
-                    <div class="font-bold text-lg text-gray-800 mb-2">วท.สารภี ช่วยเหลือผู้ประสบภัยน้ำท่วม "น่าน"</div>
-                    <div class="text-gray-500 text-sm mb-2">กิจกรรมช่วยเหลือผู้ประสบภัยน้ำท่วมโดยนักศึกษาอาชีวะ</div>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <span class="flex items-center gap-1 text-pink-600 text-xs"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>1</span>
-                        <button class="text-gray-400 hover:text-gray-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
-                    </div>
-                </div>
-            </div>
-            <!-- ข่าวที่เกี่ยวข้อง 3 -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
-                <img src="{{ asset('images/bg2.jpg') }}" alt="ข่าวที่เกี่ยวข้อง" class="w-full h-48 object-cover">
-                <div class="p-4 flex-1 flex flex-col">
-                    <div class="font-bold text-lg text-gray-800 mb-2">ปึ้ง เมนูพิเศษวันแม่ by อินทนิลจันท์</div>
-                    <div class="text-gray-500 text-sm mb-2">กิจกรรมวันแม่โดยนักศึกษาอาชีวะ</div>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <span class="flex items-center gap-1 text-pink-600 text-xs"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>3</span>
-                        <button class="text-gray-400 hover:text-gray-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="flex justify-center mb-8">
-            <a href="#" class="bg-[#8a438f] hover:bg-[#5b3a5b] text-white font-bold px-8 py-3 rounded-full shadow flex items-center gap-2 text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-7 4h4" /></svg>ดูข่าวที่เกี่ยวข้อง <span class="ml-1">→</span></a>
-        </div>
+        @include('components.content-project')
+        
 
         <!-- บทความที่เกี่ยวข้อง -->
         <div class="flex items-center gap-2 mb-4">
