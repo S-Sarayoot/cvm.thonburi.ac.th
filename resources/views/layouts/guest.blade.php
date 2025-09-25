@@ -77,7 +77,6 @@ $bg = $backgrounds[array_rand($backgrounds)];
         <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center bg-white-900">
             <div class="min-h-screen ">
                 @include('layouts.navigation')
-                @include('layouts.banner-header')
             <!-- Page Heading -->
             @isset($header)
                 <header>

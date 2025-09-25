@@ -23,15 +23,15 @@
     </head>
     
     @php
-        $backgrounds = [
-            asset('images/bg1.jpg'),
-            asset('images/bg2.jpg'),
-            //asset('images/bg3.jpg'),
-            asset('images/bg4.jpg'),
-            asset('images/bg5.jpg'),
-            asset('images/bg6.jpg'),
-        ];
-        $bg = $backgrounds[array_rand($backgrounds)];
+$backgrounds = [
+    asset('images/bg1.jpg'),
+    asset('images/bg2.jpg'),
+    //asset('images/bg3.jpg'),
+    asset('images/bg4.jpg'),
+    asset('images/bg5.jpg'),
+    asset('images/bg6.jpg'),
+];
+$bg = $backgrounds[array_rand($backgrounds)];
     @endphp
 
     <style>
@@ -75,18 +75,36 @@
     </style>
 
     <body class="font-sans athiti-regular antialiased" >
-        <div id="fade-bg" class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white-900">
-            <div class="min-h-screen  bg-gradient-to-r from-gray-100 via-gray-200 to-white-100">
-                @include('layouts-user.navigation')
-
-                
-                <!-- Page Content -->
-                <main>
-                    {{ $slot }}
-                </main>
-
-                @include('layouts-user.footer')     
+        <div id="fade-bg" class="flex h-dvh w-dvh bg-white-900">
+            <!-- Sidebar -->
+            <div class="h-full">
+                @auth
+                    @if (auth()->user()->is_admin === '1')
+                        @include('layouts-admin.sidebar')
+                    @else
+                        @include('layouts-user.sidebar')
+                    @endif
+                @endauth
             </div>
+        
+            <!-- Content -->
+            <div class="flex-1 h-full flex flex-col px-2 pb-2">
+                <!-- Navbar -->
+                <div class="sticky top-0 z-50 bg-white">
+                    @include('layouts-user.navigation')
+                </div>
+        
+                <!-- Content scrollable -->
+                <div class="flex-1 overflow-y-auto">
+                    <main>
+                        {{ $slot }}
+                    </main>
+                    @include('layouts-user.footer')
+                </div>
+            </div>
+        </div>
+
+
 
             
             @push('scripts')
