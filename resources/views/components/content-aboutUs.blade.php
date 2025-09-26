@@ -1,0 +1,1 @@
+<h1 class="text-xl text-gray-800 text-center">Coming soon</h1>

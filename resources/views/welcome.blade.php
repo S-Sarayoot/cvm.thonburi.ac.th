@@ -55,6 +55,12 @@ $navMenu = [
             <div x-show="active === 'โครงการ'" x-cloak>
                 @include('components.content-project')
             </div>
+            <div x-show="active === 'ผลงานของนักศึกษา'" x-cloak>
+                @include('components.content-student')
+            </div>
+            <div x-show="active === 'เกี่ยวกับสาขา'" x-cloak>
+                @include('components.content-aboutUs')
+            </div>
         </div>
 
     </div>
