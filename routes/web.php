@@ -14,31 +14,19 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/news', function () {
-    return view('news.page');
-});
-
 Route::get('/news/{id}', function () {
     return view('knowLedgeRepository.detail');
 });
 
-Route::get('/repository', function () {
-    return view('knowLedgeRepository.page');
-});
+
 Route::get('/repository/{id}', function () {
     return view('knowLedgeRepository.detail');
 });
 
-Route::get('/project', function () {
-    return view('project.page');
-});
 Route::get('/project/{id}', function () {
     return view('project.detail');
 });
 
-Route::get('/showcase', function () {
-    return view('showcase.page');
-});
 
 Route::get('/showcase/{id}', function () {
     return view('showcase.detail');
