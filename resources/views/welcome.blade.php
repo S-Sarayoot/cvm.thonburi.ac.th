@@ -42,12 +42,15 @@ $navMenu = [
         </div>
 
         <!-- Content -->
-        <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="max-w-7xl mx-auto pb-4">
             <div x-show="active === 'หน้าแรก'" x-cloak>
                 @include('components.content-welcome')
             </div>
             <div x-show="active === 'ประชาสัมพันธ์'" x-cloak>
                 @include('components.content-announcment')
+            </div>
+            <div x-show="active === 'คลังปัญญา'" x-cloak>
+                @include('components.content-repository')
             </div>
             <div x-show="active === 'โครงการ'" x-cloak>
                 @include('components.content-project')

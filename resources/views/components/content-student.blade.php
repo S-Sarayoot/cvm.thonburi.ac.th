@@ -37,5 +37,5 @@
 @endphp
 
 <div class="max-w-7xl mx-auto">
-    <x-list-showData title="ข่าวประชาสัมพันธ์" :active="$active" :mockupData="$mockupData" />
+    <x-list-showData title="ผลงานของนักศึกษา" :active="$active" :mockupData="$mockupData" />
 </div>
