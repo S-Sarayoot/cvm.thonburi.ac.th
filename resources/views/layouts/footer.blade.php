@@ -1,6 +1,6 @@
 <footer class="bg-white border-t border-gray-xt-gray-800 pt-4">
     <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-8">
-        <div class="flex-1 mb-6 md:mb-0">
+        <div class="flex-1 mb-2 md:mb-0">
             <h5 class="text-xl font-bold text-[#8a438f] mb-2">ติดต่อสอบถาม</h5>
             <div class="mb-2">วิทยาลัยอาชีวศึกษาธนบุรี</div>
             <div class="mb-2 flex"><span class="font-bold text-[#8a438f] flex items-center mr-2"><img class="size-5 mr-1" src="https://img.icons8.com/material-rounded/24/8a438f/phone--v1.png" alt="phone--v1" />โทร:</span> <span>02-412-6285 , 02-4123-411</span></div>
@@ -8,7 +8,7 @@
             <div class="mb-2"><span class="font-bold text-[#8a438f] flex items-center mr-2"><img class="size-5 mr-1"" src="https://img.icons8.com/ios-filled/50/8a438f/marker.png" alt="marker" />ที่อยู่:</span> <span>182 ซอย จรัญสนิทวงศ์ 13 แขวงวัดท่าพระ เขตบางกอกใหญ่ กรุงเทพมหานคร 10600</span></div>
             <div class="mb-2 flex"><span class="font-bold text-[#8a438f] flex items-center mr-2"><img class="size-5 mr-1"" src=" https://img.icons8.com/?size=100&id=83147&format=png&color=8a438f" alt="clock" />เวลาทำการ:</span> <span>จันทร์-ศุกร์ 08:00-16:00 น.</span></div>
         </div>
-        <div class="flex-1 mb-6 md:mb-0">
+        <div class="flex-1 mb-2 md:mb-0">
             <h5 class="text-xl font-bold text-[#8a438f] mb-2">ติดตามเรา</h5>
             <div class="flex gap-4 mb-2">
                <ul>
@@ -64,7 +64,7 @@
             <div>วิทยาลัยอาชีวศึกษาธนบุรี มุ่งมั่นพัฒนาคุณภาพการศึกษาและบริการเพื่อสังคม</div>
         </div>
     </div>
-    <div class="border-t bg-[#6e2473] border-purple-300 py-4 text-center">
+    <div class="border-t bg-[#6e2473] border-purple-300 py-4 text-center max-md:mt-4">
         <small class="text-white">&copy; {{ date('Y') }} วิทยาลัยอาชีวศึกษาธนบุรี | All rights reserved.</small>
     </div>
 </footer>
