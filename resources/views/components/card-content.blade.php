@@ -10,7 +10,7 @@
 ])
  
 <a href="repository/{{ $id }}">
-    <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-[1.03] transition border border-gray-100 relative">
         <img src="{{ asset($srcImage == '' ? 'https://coffective.com/wp-content/uploads/2018/06/default-featured-image.png.jpg' : $srcImage) }}" alt="{{$category}}" class="w-full h-48 object-cover">
         @if ($category != null)
             <span class="absolute top-4 left-4 bg-[#891f71] text-white text-xs font-bold px-3 py-1 rounded-full shadow">★ {{$category }}</span>
