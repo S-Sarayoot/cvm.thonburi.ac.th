@@ -21,7 +21,7 @@
                         </div>
                 </button>
             </div>
-           <div>
+           <div class="max-md:hidden">
                 <form class="max-w-sm min-w-[200px]">
                     <div class="relative flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
